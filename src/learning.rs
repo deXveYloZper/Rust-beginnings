@@ -22,6 +22,8 @@ struct Person{
     age: u32,
 }
 
+struct Points(i32, i32);
+
 
 impl Person{
     fn new(name: String, age: u32)-> Self{
@@ -40,5 +42,8 @@ fn main(){
     let mut bob = Person::new("bob".to_string(), 30);
 
     bob.say_name();
-    bob.change_age(28)
+    bob.change_age(28);
+
+    let x = point.0;
+    let y = point.1;
 }
