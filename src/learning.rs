@@ -47,3 +47,27 @@ fn main(){
     let x = point.0;
     let y = point.1;
 }
+
+trait Add_User{
+    fn adding_user_name(&self) -> String;
+}
+struct Account{
+    name: String,
+    age: u64,
+    active: bool,
+    }
+
+impl Add_User for Account{
+    fn adding_user_name(&self) -> String{
+        "Kristian".to_string()
+    }
+}
+
+fn main(){
+    let account = Account{
+        name: "Peter".to_string(),
+        age: 30,
+        active: true
+    };
+    println!("User name: {}", account.account.adding_user_name())
+}
